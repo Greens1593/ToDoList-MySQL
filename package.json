@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Greens1593/ToDoList-MySQL.git"
+    "url": "git+ssh://git@github.com:Greens1593/ToDoList-MySQL.git"
   },
   "author": "Mikle Green",
   "license": "ISC",
