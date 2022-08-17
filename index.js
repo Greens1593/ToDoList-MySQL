@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 
 const todoRoutes = require('./routes/todo.js')
+const sequelize = require('./utils/dataBase.js')
 
 const PORT = process.env.port || 3000;
 
@@ -14,7 +15,14 @@ app.use((req, res, next) => {
     res.sendFile('/index.html')
 });
 
+async function start () {
+    try{
+        await sequelize.sync()
+        app.listen(PORT)
+        console.log('Server was start in port:', PORT)
+    } catch (e) {
+        console.log(e)
+    }
+}
 
-app.listen(PORT)
-
-console.log('Server was start in port:', PORT)
+start()
