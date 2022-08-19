@@ -23,6 +23,7 @@ router.post('/', async (res, req) => {
             title: req.body.title,
             done: false,
         })
+        console.log(todo)
         res.status(201).json({todo})
     }catch(e){
         console.log(e);

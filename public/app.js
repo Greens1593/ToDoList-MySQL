@@ -16,7 +16,7 @@ new Vue({
         }
         fetch('/api/todo', {
           method: 'post',
-          headers: {'Content-type': 'aplication/json'},
+          headers: {'Content-type': 'application/json'},
           body: JSON.stringify({title})
         })
           .then(res => res.json())
@@ -25,7 +25,8 @@ new Vue({
             this.todos.push(todo)
             this.todoTitle = ''
           })
-          .catch(e => cpnsole.log(e))
+          .catch(e => console.log(e))
+          
       },
       removeTodo(id) {
         this.todos = this.todos.filter(t => t.id !== id)
