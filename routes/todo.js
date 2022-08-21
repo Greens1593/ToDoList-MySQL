@@ -1,6 +1,9 @@
 const {Router} = require('express');
+const express = require('express')
 const Todo = require('../models/todo.js')
 const router = Router();
+
+router.use(express.json())
 
 // Получение списка задач
 
@@ -18,6 +21,7 @@ router.get('/', (res, req) => {
 // Создание новой задачи
 
 router.post('/', async (res, req) => {
+    console.log(req.body)
     try{
         const todo = await Todo.create({
             title: req.body.title,

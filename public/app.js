@@ -15,9 +15,9 @@ new Vue({
           return
         }
         fetch('/api/todo', {
-          method: 'post',
-          headers: {'Content-type': 'aplication/json'},
-          body: JSON.stringify({title})
+          method: 'POST',
+          headers: {'Content-type': 'application/json'},
+          body: JSON.stringify({title: title})
         })
           .then(res => res.json())
           .then(({todo}) => {
