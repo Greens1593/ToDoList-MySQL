@@ -7,9 +7,10 @@ router.use(express.json())
 
 // Получение списка задач
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try{
-
+      const todos = await Todo.findAll()
+      res.status(200).json(todos)
     }catch(e){
         console.log(e);
         res.status(500).json({
