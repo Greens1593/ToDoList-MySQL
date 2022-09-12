@@ -4,7 +4,7 @@ const router = Router();
 
 // Получение списка задач
 
-router.get('/', (res, req) => {
+router.get('/', (req, res) => {
     try{
 
     }catch(e){
@@ -17,7 +17,7 @@ router.get('/', (res, req) => {
 
 // Создание новой задачи
 
-router.post('/', async (res, req) => {
+router.post('/', async (req, res) => {
     try{
         const todo = await Todo.create({
             title: req.body.title,
