@@ -1,9 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
-const todoRoutes = require('./routes/todo.js')
-const sequelize = require('./utils/dataBase.js')
 
 const PORT = process.env.port || 3000;
 

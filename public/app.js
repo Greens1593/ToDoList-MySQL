@@ -25,7 +25,8 @@ new Vue({
             this.todos.push(todo)
             this.todoTitle = ''
           })
-          .catch(e => cpnsole.log(e))
+          .catch(e => console.log(e))
+          
       },
       removeTodo(id) {
         this.todos = this.todos.filter(t => t.id !== id)
